@@ -1,5 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://cutk78ygxma31"]
-
-[ext_resource type="PackedScene" uid="uid://deieif4fxqljw" path="res://meshes/2_assets/3_items/1_food/apple1.blend" id="1_jtv36"]
-
-[node name="apple1" instance=ExtResource("1_jtv36")]

@@ -1,8 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://ca4kw6bmepkcb"]
-
-[ext_resource type="PackedScene" uid="uid://mmc11uysgbhl" path="res://meshes/2_assets/3_items/0_general/debug_cube.blend" id="1_vxn6k"]
-
-[node name="debug_cube" instance=ExtResource("1_vxn6k")]
-
-[node name="Cube" parent="." index="0"]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0.5, 0)

@@ -1,9 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://cj0swygqsv3c8"]
-
-[ext_resource type="PackedScene" uid="uid://cwr3dpckm5jc2" path="res://meshes/2_assets/3_items/0_general/coin.blend" id="1_uju76"]
-
-[node name="coin2" instance=ExtResource("1_uju76")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
-
-[node name="Circle" parent="." index="0"]
-transform = Transform3D(1.00111, 0, 0, 0, -4.37598e-08, -1.00111, 0, 1.00111, -4.37598e-08, 0.00110745, 0, -0.00110745)

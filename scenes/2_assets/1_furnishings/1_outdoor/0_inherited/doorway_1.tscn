@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://c86svrlqdsig"]
+
+[ext_resource type="PackedScene" uid="uid://biutv43wh74is" path="res://meshes/2_assets/1_furnishings/1_outdoor/doorway1.blend" id="1_7iwnj"]
+
+[node name="doorway1" instance=ExtResource("1_7iwnj")]
