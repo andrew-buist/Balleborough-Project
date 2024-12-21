@@ -1,0 +1,21 @@
+[gd_scene load_steps=2 format=3 uid="uid://2bmelxm8dpsf"]
+
+[ext_resource type="PackedScene" uid="uid://bp65xip6axhft" path="res://meshes/2_assets/3_items/1_food/apple2.blend" id="1_vt2pf"]
+
+[node name="apple2" instance=ExtResource("1_vt2pf")]
+
+[node name="Skeleton3D" parent="apple/Armature" index="0"]
+bones/0/position = Vector3(0, 0, 0)
+bones/0/rotation = Quaternion(-2.66925e-08, -2.66925e-08, -0.707107, 0.707107)
+bones/1/rotation = Quaternion(8.69767e-10, -2.39243e-24, -5.38726e-09, 1)
+bones/2/rotation = Quaternion(2.42556e-10, -3.95995e-20, -1.54798e-09, 1)
+bones/3/rotation = Quaternion(-2.28851e-10, -1.49924e-19, 1.29202e-09, 1)
+bones/4/rotation = Quaternion(-8.52946e-10, -1.7636e-15, 1.98928e-08, 1)
+bones/5/position = Vector3(0, 0.411388, 0)
+bones/5/rotation = Quaternion(0, 0, 0, 1)
+
+[node name="worm" parent="apple/Armature/Skeleton3D" index="0"]
+lod_bias = 20.0
+
+[node name="AnimationPlayer" parent="." index="1"]
+autoplay = "idle"

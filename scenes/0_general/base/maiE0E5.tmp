@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://q0y7di68njdi"]
+
+[ext_resource type="Script" path="res://scripts/general/main.gd" id="1_c0qo6"]
+[ext_resource type="PackedScene" uid="uid://bfb1wq1x85dyl" path="res://scenes/maps/map1/city_map1.tscn" id="5_srrfo"]
+
+[node name="Main" type="Node"]
+script = ExtResource("1_c0qo6")
+scene_names = Array[String](["citymap1"])
+scene_array = Array[PackedScene]([ExtResource("5_srrfo")])

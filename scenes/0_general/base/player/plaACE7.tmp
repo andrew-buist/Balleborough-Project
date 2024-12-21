@@ -1,0 +1,120 @@
+[gd_scene load_steps=14 format=3 uid="uid://bw0teu0b2b8br"]
+
+[ext_resource type="Script" path="res://scripts/general/player.gd" id="1_5qgbl"]
+[ext_resource type="Script" path="res://scenes/0_general/base/player/camera.gd" id="3_csj5s"]
+[ext_resource type="PackedScene" uid="uid://bxolkpevgkfin" path="res://scenes/0_general/base/player/GUI.tscn" id="3_myha8"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_krcpu"]
+albedo_color = Color(0.694118, 0.360784, 0, 1)
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_yhycp"]
+material = SubResource("StandardMaterial3D_krcpu")
+radius = 0.4
+height = 1.8
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_w1yve"]
+radius = 0.4
+height = 1.8
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_4eabb"]
+
+[sub_resource type="Gradient" id="Gradient_ap8s7"]
+offsets = PackedFloat32Array(0.503268, 1)
+colors = PackedColorArray(0, 0, 0, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_46msv"]
+gradient = SubResource("Gradient_ap8s7")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.751152, 0.207373)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8myb8"]
+transparency = 1
+cull_mode = 2
+albedo_color = Color(0, 0, 0, 1)
+albedo_texture = SubResource("GradientTexture2D_46msv")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_fb2a4"]
+size = Vector3(1, 2, 1)
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_o3ssm"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_bqtja"]
+size = Vector3(0.4, 0.2, 0.2)
+
+[node name="player_root" type="Node3D" groups=["player"]]
+
+[node name="GUI" parent="." instance=ExtResource("3_myha8")]
+
+[node name="camera_root" type="Node3D" parent="."]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.7, 5)
+
+[node name="camera" type="Camera3D" parent="camera_root"]
+unique_name_in_owner = true
+current = true
+fov = 60.0
+script = ExtResource("3_csj5s")
+
+[node name="camera_raycast" type="RayCast3D" parent="camera_root"]
+unique_name_in_owner = true
+target_position = Vector3(0, 0, -5)
+collision_mask = 3
+hit_from_inside = true
+
+[node name="player_model_pivot" type="CharacterBody3D" parent="."]
+unique_name_in_owner = true
+script = ExtResource("1_5qgbl")
+
+[node name="playermesh" type="MeshInstance3D" parent="player_model_pivot"]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9, 0)
+mesh = SubResource("CapsuleMesh_yhycp")
+skeleton = NodePath("../..")
+
+[node name="playercollider" type="CollisionShape3D" parent="player_model_pivot"]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9, 0)
+shape = SubResource("CapsuleShape3D_w1yve")
+
+[node name="shadow_mesh" type="MeshInstance3D" parent="player_model_pivot"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.01, 0)
+mesh = SubResource("PlaneMesh_4eabb")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_8myb8")
+
+[node name="stairs_f" type="RayCast3D" parent="player_model_pivot"]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.35, -0.55)
+target_position = Vector3(0, -0.35, 0)
+
+[node name="stairs_d" type="RayCast3D" parent="player_model_pivot"]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -8.19564e-08, -0.05)
+target_position = Vector3(0, -0.75, 0)
+
+[node name="manual_handling_collider" type="ShapeCast3D" parent="player_model_pivot"]
+unique_name_in_owner = true
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0, 1, 0)
+shape = SubResource("BoxShape3D_fb2a4")
+target_position = Vector3(0, 0, 1)
+collision_mask = 4
+
+[node name="body_handling_collider" type="ShapeCast3D" parent="player_model_pivot"]
+unique_name_in_owner = true
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0, 2, 0)
+shape = SubResource("CapsuleShape3D_o3ssm")
+margin = 0.5
+collision_mask = 129
+
+[node name="camera_snap" type="Node3D" parent="player_model_pivot"]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.7, 3)
+
+[node name="camera_orbit" type="Node3D" parent="player_model_pivot"]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.7, 0)
+
+[node name="front_box" type="MeshInstance3D" parent="player_model_pivot"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.4, -0.4)
+mesh = SubResource("BoxMesh_bqtja")

@@ -1,0 +1,51 @@
+[gd_scene load_steps=3 format=3 uid="uid://bomcy70potswe"]
+
+[ext_resource type="PackedScene" uid="uid://dq4cwg68rxu6g" path="res://meshes/3_characters/2_wildlife/whale.blend" id="1_1lbh7"]
+[ext_resource type="Script" path="res://scenes/3_characters/2_wildlife/whale_1.gd" id="2_dipsj"]
+
+[node name="whale" instance=ExtResource("1_1lbh7")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 0, 0)
+
+[node name="whale_pose" parent="." index="0"]
+transform = Transform3D(1, 0, 0, 0, 0.998425, 0.0560942, 0, -0.0560942, 0.998425, 0, 0.631929, 0)
+
+[node name="Skeleton3D" parent="whale_pose" index="0"]
+bones/0/rotation = Quaternion(-0.0118244, -0.00795392, 0.00437059, 0.999889)
+bones/1/position = Vector3(0.823201, 7.37404, 10.0082)
+bones/1/rotation = Quaternion(0.00871497, 0.698667, 0.715389, -0.00253358)
+bones/2/position = Vector3(-0.376545, 7.38431, 10.0274)
+bones/2/rotation = Quaternion(0.00871497, 0.698667, 0.715389, -0.00253358)
+bones/3/position = Vector3(0.225924, 8.28082, 9.69227)
+bones/3/rotation = Quaternion(0.00871497, 0.698667, 0.715389, -0.00253358)
+bones/4/position = Vector3(-0.0899359, 6.81984, -9.48142)
+bones/4/rotation = Quaternion(-0.50871, 0.499752, -0.503412, 0.487892)
+bones/5/position = Vector3(2.61194, 7.84432, -2.91565)
+bones/5/rotation = Quaternion(0.0136894, 0.93172, -0.23297, 0.278272)
+bones/6/position = Vector3(-2.75188, 7.7575, -3.04463)
+bones/6/rotation = Quaternion(-0.0236072, 0.90567, -0.333998, -0.260095)
+bones/7/position = Vector3(0.172358, 4.72049, 8.25483)
+bones/7/rotation = Quaternion(0.00871497, 0.698667, 0.715389, -0.00253358)
+bones/8/rotation = Quaternion(0.00525398, 0.660604, 0.750716, 6.42626e-05)
+bones/9/rotation = Quaternion(0.0910418, -0.00314736, 0.00982036, 0.995794)
+bones/10/rotation = Quaternion(0.106533, -0.00097067, 0.00707303, 0.994284)
+bones/11/rotation = Quaternion(0.0672616, 0.868616, -0.457932, 0.176862)
+bones/12/rotation = Quaternion(-0.12412, -0.0892141, 0.0185572, 0.988074)
+bones/13/rotation = Quaternion(0.017128, 0.667448, 0.744353, -0.0125975)
+bones/15/rotation = Quaternion(0.11934, 0.387455, 0.911071, -0.0747466)
+bones/16/rotation = Quaternion(0.51082, 0.0204837, -0.0878052, 0.854947)
+bones/17/rotation = Quaternion(0.291864, -0.229977, -0.283217, 0.884146)
+bones/18/rotation = Quaternion(-0.0932074, 0.874327, -0.445603, -0.168236)
+bones/19/rotation = Quaternion(-0.0626638, 0.0965796, 0.0157147, 0.993226)
+bones/21/rotation = Quaternion(-0.108186, 0.395091, 0.9094, 0.072046)
+bones/22/rotation = Quaternion(0.504732, 0.000823011, 0.112301, 0.85594)
+bones/23/rotation = Quaternion(0.263598, 0.228634, 0.302144, 0.887103)
+bones/24/rotation = Quaternion(-0.738759, 0.00367274, 0.00236565, 0.673955)
+bones/25/rotation = Quaternion(-4.98063e-05, 0.000875525, -0.000195547, 1)
+bones/26/rotation = Quaternion(-0.00102162, 0.707711, 0.00104215, 0.706501)
+bones/27/rotation = Quaternion(-0.00266699, 6.45605e-05, 0.0330629, 0.99945)
+
+[node name="Cube_002" parent="whale_pose/Skeleton3D" index="0"]
+extra_cull_margin = 1000.0
+
+[node name="AnimationPlayer" parent="." index="1"]
+script = ExtResource("2_dipsj")

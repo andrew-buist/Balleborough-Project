@@ -1,0 +1,14 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://bkheo8mchi8fa"
+valid=false
+
+[deps]
+
+source_file="res://dialog/godhead1.dialogue"
+
+[params]
+
+defaults=true

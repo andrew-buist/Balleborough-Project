@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="Item" load_steps=2 format=3 uid="uid://txwmaofwxosk"]
+
+[ext_resource type="Script" path="res://scripts/1_resource/item_class.gd" id="1_rmcqy"]
+
+[resource]
+resource_local_to_scene = true
+script = ExtResource("1_rmcqy")
+item = 0

@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://dngilca7oauwr"]
+
+[ext_resource type="PackedScene" uid="uid://d0dqvc4y4blps" path="res://meshes/1_maps/0_misc/0_debug_map1.blend" id="1_cpuki"]
+
+[node name="0_debug_map1" instance=ExtResource("1_cpuki")]

@@ -1,0 +1,21 @@
+[gd_scene load_steps=6 format=3 uid="uid://bbxqphvpbb0c4"]
+
+[ext_resource type="PackedScene" uid="uid://dngilca7oauwr" path="res://scenes/maps/0_direct_imports/0_misc/0_debug_map1.tscn" id="1_i5gxj"]
+[ext_resource type="PackedScene" uid="uid://clah8yrgddnim" path="res://scenes/general/skyboxes/skybox1.tscn" id="1_p6880"]
+[ext_resource type="PackedScene" uid="uid://bw0teu0b2b8br" path="res://scenes/base/player/player.tscn" id="2_nkuq1"]
+[ext_resource type="Script" path="res://scripts/asset_interaction/item_pickup.gd" id="4_5qxf5"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_4ixx5"]
+
+[node name="0DebugMap1" type="Node3D"]
+
+[node name="Skybox" parent="." instance=ExtResource("1_p6880")]
+
+[node name="0_debug_map1" parent="." instance=ExtResource("1_i5gxj")]
+
+[node name="Player" parent="." instance=ExtResource("2_nkuq1")]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 10)
+mesh = SubResource("BoxMesh_4ixx5")
+script = ExtResource("4_5qxf5")

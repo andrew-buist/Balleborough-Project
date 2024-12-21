@@ -1,0 +1,14 @@
+[gd_scene load_steps=4 format=3 uid="uid://civkjew1qb36y"]
+
+[ext_resource type="PackedScene" uid="uid://b4h6oo6pcqgm5" path="res://meshes/2_assets/2_furnishings/0_general/chest.blend" id="1_62baa"]
+[ext_resource type="Texture2D" uid="uid://qpgslmsudy8k" path="res://tiles/textures/k_furnishings/1_general/k1_chest.png" id="2_2ddrt"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rbno0"]
+cull_mode = 2
+albedo_texture = ExtResource("2_2ddrt")
+
+[node name="chest" instance=ExtResource("1_62baa")]
+
+[node name="lid" parent="." index="1"]
+transform = Transform3D(1, 0, 0, 0, 0.5, 0.866025, 0, -0.866025, 0.5, 0, 0.496715, -0.337064)
+surface_material_override/0 = SubResource("StandardMaterial3D_rbno0")

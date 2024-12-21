@@ -1,0 +1,36 @@
+[gd_scene load_steps=6 format=3 uid="uid://bqehnmfk5ge6w"]
+
+[ext_resource type="Script" path="res://scripts/general/menu/menu_inventory.gd" id="1_t7vd4"]
+[ext_resource type="FontFile" uid="uid://dam058e85c55i" path="res://tiles/fonts/GrapeSoda.ttf" id="2_nm7oi"]
+
+[sub_resource type="Gradient" id="Gradient_nbqyp"]
+colors = PackedColorArray(0, 0.1505, 0.21, 1, 0, 0.61962, 0.62124, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_rrf37"]
+gradient = SubResource("Gradient_nbqyp")
+
+[sub_resource type="Theme" id="Theme_j7dhb"]
+default_font = ExtResource("2_nm7oi")
+
+[node name="Inventory" type="SubViewport"]
+size = Vector2i(500, 300)
+script = ExtResource("1_t7vd4")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture1D_rrf37")
+
+[node name="ItemList" type="ItemList" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_j7dhb")
+max_columns = 10
+same_column_width = true
+fixed_icon_size = Vector2i(32, 32)

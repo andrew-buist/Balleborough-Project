@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://cpae1fb15vd2s"]
+
+[ext_resource type="PackedScene" uid="uid://clah8yrgddnim" path="res://scenes/0_general/skyboxes/skybox1.tscn" id="1_jj3sa"]
+[ext_resource type="PackedScene" uid="uid://bw0teu0b2b8br" path="res://scenes/0_general/base/player/player.tscn" id="3_d8bio"]
+[ext_resource type="QuadMesh" uid="uid://faqwgsnrmmdi" path="res://resources/0_general/smokepuff.tres" id="4_1jeak"]
+[ext_resource type="PackedScene" uid="uid://bp5qtnxr2d8kx" path="res://scenes/1_maps/0_inherited/1_overworld/1_city_map.tscn" id="4_glg0q"]
+
+[node name="CityMap1" type="Node3D"]
+
+[node name="Skybox" parent="." instance=ExtResource("1_jj3sa")]
+
+[node name="Player" parent="." instance=ExtResource("3_d8bio")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.1, 0, -221)
+
+[node name="1_city_map" parent="." instance=ExtResource("4_glg0q")]
+
+[node name="CPUParticles3D" type="CPUParticles3D" parent="1_city_map"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.7, 9.8, 218.5)
+lifetime = 2.0
+randomness = 1.0
+fixed_fps = 24
+mesh = ExtResource("4_1jeak")
+gravity = Vector3(-1, 1, 1)
+initial_velocity_max = 0.5
+angular_velocity_max = 30.0
+scale_amount_max = 5.0

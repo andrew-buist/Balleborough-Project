@@ -1,0 +1,29 @@
+[gd_scene load_steps=7 format=3 uid="uid://bwr3kg0r2x5lf"]
+
+[ext_resource type="PackedScene" uid="uid://d327g3th16a0h" path="res://scenes/3_characters/1_npcs/0_inherited/onionguy_inherited.tscn" id="1_edjd8"]
+[ext_resource type="Script" path="res://scripts/char/character_movement.gd" id="1_sp610"]
+[ext_resource type="Texture2D" uid="uid://cuv2rcrdx06ld" path="res://tiles/textures/f_specials/4_generic/f_512x512_1a.png" id="3_n1lu8"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_jcmae"]
+radius = 0.75
+height = 3.0
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_fgelx"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_buh2s"]
+transparency = 1
+albedo_texture = ExtResource("3_n1lu8")
+
+[node name="Onionguy" type="CharacterBody3D"]
+script = ExtResource("1_sp610")
+
+[node name="character_scene" parent="." instance=ExtResource("1_edjd8")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+shape = SubResource("CapsuleShape3D_jcmae")
+
+[node name="shadow_mesh" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.01, 0)
+mesh = SubResource("PlaneMesh_fgelx")
+surface_material_override/0 = SubResource("StandardMaterial3D_buh2s")

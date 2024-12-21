@@ -1,0 +1,55 @@
+[gd_scene load_steps=12 format=3 uid="uid://bbxqphvpbb0c4"]
+
+[ext_resource type="PackedScene" uid="uid://dngilca7oauwr" path="res://scenes/1_maps/0_direct_imports/0_misc/0_debug_map1.tscn" id="1_i5gxj"]
+[ext_resource type="PackedScene" uid="uid://clah8yrgddnim" path="res://scenes/0_general/skyboxes/skybox1.tscn" id="1_p6880"]
+[ext_resource type="PackedScene" uid="uid://bw0teu0b2b8br" path="res://scenes/0_general/base/player/player.tscn" id="2_nkuq1"]
+[ext_resource type="PackedScene" uid="uid://or4ebfof6mie" path="res://scenes/2_assets/3_items/general_item.tscn" id="4_c7j8k"]
+[ext_resource type="Texture2D" uid="uid://hx83gedtyglr" path="res://tiles/textures_gd/debug_inventory.tres" id="4_hycbd"]
+[ext_resource type="Script" path="res://scripts/1_resource/item_class.gd" id="5_kat7j"]
+[ext_resource type="PackedScene" uid="uid://bqehnmfk5ge6w" path="res://scenes/0_general/base/player/inventory.tscn" id="5_uj23w"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_fwo3d"]
+size = Vector2(5, 3)
+orientation = 2
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1d0y5"]
+resource_local_to_scene = true
+albedo_texture = ExtResource("4_hycbd")
+billboard_mode = 2
+
+[sub_resource type="Resource" id="Resource_vl713"]
+script = ExtResource("5_kat7j")
+item = "apple"
+
+[sub_resource type="Resource" id="Resource_4cpj5"]
+script = ExtResource("5_kat7j")
+item = "apple"
+
+[node name="0DebugMap1" type="Node3D"]
+
+[node name="Skybox" parent="." instance=ExtResource("1_p6880")]
+
+[node name="0_debug_map1" parent="." instance=ExtResource("1_i5gxj")]
+
+[node name="Player" parent="." instance=ExtResource("2_nkuq1")]
+
+[node name="Screen" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11, 2.5, 11)
+mesh = SubResource("PlaneMesh_fwo3d")
+surface_material_override/0 = SubResource("StandardMaterial3D_1d0y5")
+
+[node name="Inventory" parent="Screen" instance=ExtResource("5_uj23w")]
+
+[node name="Item" parent="." instance=ExtResource("4_c7j8k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 10)
+
+[node name="Item2" parent="." instance=ExtResource("4_c7j8k")]
+transform = Transform3D(0.965926, 0, -0.258819, 0, 1, 0, 0.258819, 0, 0.965926, 0, 0, 13)
+def = SubResource("Resource_vl713")
+
+[node name="Item3" parent="." instance=ExtResource("4_c7j8k")]
+transform = Transform3D(0.866025, 0, -0.5, 0, 1, 0, 0.5, 0, 0.866025, 0, 0, 16)
+def = SubResource("Resource_4cpj5")
+
+[node name="Item4" parent="." instance=ExtResource("4_c7j8k")]
+transform = Transform3D(0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, 0.707107, 0, 0, 19)

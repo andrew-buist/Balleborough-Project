@@ -1,0 +1,83 @@
+{
+	"debug_cube": 
+	{
+		"type": "item",
+		"category": "misc",
+		"name": "Debug Cube",
+		"weight": 0,
+		"cost": 0,
+		"description": "How did you get this?",
+		"icon": "res://tiles/ui/icons/0_static/0_items/0_general/debug_cube.png",
+		"scene": "res://scenes/2_assets/3_items/0_general/0_inherited/debug_cube.tscn",
+		"permanent": true
+	},
+	"apple": 
+	{
+		"type": "item",
+		"category": "food",
+		"name": "Apple",
+		"weight": 1,
+		"cost": 1,
+		"description": "A delicious apple.",
+		"icon": "res://tiles/ui/icons/0_static/0_items/1_food/apple1.png",
+		"scene": "res://scenes/2_assets/3_items/1_food/0_inherited/apple1.tscn",
+		"permanent": false
+	},
+	"badapple": 
+	{
+		"type": "item",
+		"category": "trash",
+		"name": "Badapple",
+		"weight": 1,
+		"cost": 0,
+		"description": "A rotten apple.",
+		"icon": "res://tiles/ui/icons/0_static/0_items/1_food/apple2.png",
+		"scene": "res://scenes/2_assets/3_items/1_food/0_inherited/apple2.tscn",
+		"permanent": false
+	},
+	"grapes": 
+	{
+		"type": "item",
+		"category": "food",
+		"name": "Grapes",
+		"weight": 1,
+		"cost": 5,
+		"description": "A bunch of grapes.",
+		"icon": "res://tiles/ui/icons/0_static/0_items/1_food/grapes1.png",
+		"scene": "res://scenes/2_assets/3_items/1_food/0_inherited/grapes1.tscn",
+		"permanent": false
+	},
+	"newspaper":
+		{
+			"type": "item",
+			"category": "trash",
+			"name": "Newspaper",
+			"weight": 1,
+			"cost": 0,
+			"description": "Yesterday's news.",
+			"icon": "res://tiles/ui/icons/0_static/0_items/1_food/apple2.png",
+			"scene": "res://scenes/2_assets/3_items/1_food/0_inherited/apple2.tscn",
+			"permanent": false
+		},
+	"dice": 
+	{
+		"type": "item",
+		"category": "misc",
+		"name": "Dice",
+		"weight": 1,
+		"cost": 5,
+		"description": "A pair of dice - they seem to be fairly weighted.",
+		"icon": "res://tiles/ui/icons/0_static/0_items/0_general/dice.png",
+		"scene": "res://scenes/2_assets/3_items/0_general/0_inherited/dice.tscn",
+		"permanent": false
+	},
+	"coin10": 
+	{
+		"type": "money",
+		"name": "Coin",
+		"cost": 10,
+		"icon": "res://tiles/ui/icons/0_static/0_items/0_general/coin.png",
+		"scene": "res://scenes/2_assets/3_items/0_general/0_inherited/coin.tscn",
+		"permanent": false
+	}
+}
