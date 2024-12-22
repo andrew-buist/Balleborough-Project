@@ -1,5 +1,5 @@
 [gd_scene load_steps=2 format=3 uid="uid://dx7v2mg1tybqb"]
 
-[ext_resource type="PackedScene" uid="uid://767kwfr8euks" path="res://meshes/2_assets/3_items/0_general/dice.blend" id="1_8p7qb"]
+[ext_resource type="PackedScene" uid="uid://b2i0s5gw12v35" path="res://meshes/2_assets/2_items/0_general/dice.blend" id="1_8p7qb"]
 
 [node name="dice2" instance=ExtResource("1_8p7qb")]

@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://bw0teu0b2b8br" path="res://scenes/0_general/base/player/player.tscn" id="3_d8bio"]
 [ext_resource type="QuadMesh" uid="uid://faqwgsnrmmdi" path="res://resources/0_general/smokepuff.tres" id="4_1jeak"]
 [ext_resource type="PackedScene" uid="uid://bp5qtnxr2d8kx" path="res://scenes/1_maps/0_inherited/1_overworld/1_city_map.tscn" id="4_glg0q"]
-[ext_resource type="PackedScene" uid="uid://c86svrlqdsig" path="res://scenes/2_assets/1_furnishings/1_outdoor/0_inherited/doorway_1.tscn" id="5_0feqe"]
+[ext_resource type="PackedScene" uid="uid://c86svrlqdsig" path="res://scenes/2_assets/1_furnishings/1_outdoor/0_inherited/doorway1.tscn" id="5_0feqe"]
 
 [node name="CityMap1" type="Node3D"]
 

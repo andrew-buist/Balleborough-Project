@@ -1,5 +1,5 @@
 [gd_scene load_steps=2 format=3 uid="uid://cekhlae6x3lfy"]
 
-[ext_resource type="PackedScene" uid="uid://b1yuc5lhk0uqd" path="res://meshes/2_assets/3_items/1_food/grapes1.blend" id="1_u3l83"]
+[ext_resource type="PackedScene" uid="uid://bcbpjqgpl4g8j" path="res://meshes/2_assets/2_items/1_food/grapes1.blend" id="1_u3l83"]
 
 [node name="grapes1" instance=ExtResource("1_u3l83")]

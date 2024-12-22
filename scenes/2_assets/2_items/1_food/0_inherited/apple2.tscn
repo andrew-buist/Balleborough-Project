@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://2bmelxm8dpsf"]
 
-[ext_resource type="PackedScene" uid="uid://bp65xip6axhft" path="res://meshes/2_assets/3_items/1_food/apple2.blend" id="1_vt2pf"]
+[ext_resource type="PackedScene" uid="uid://dkpk5yq44tr1c" path="res://meshes/2_assets/2_items/1_food/apple2.blend" id="1_vt2pf"]
 
 [node name="apple2" instance=ExtResource("1_vt2pf")]
 

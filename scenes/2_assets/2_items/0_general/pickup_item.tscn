@@ -39,7 +39,7 @@ script = ExtResource("1_ohn6u")
 def = SubResource("Resource_j62l7")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
-transform = Transform3D(-0.300375, 0, -0.953821, 0, 1, 0, 0.953821, 0, -0.300375, 0, 0.189795, 0)
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
 collision_layer = 4
 collision_mask = 0
 
@@ -55,3 +55,5 @@ libraries = {
 "": SubResource("AnimationLibrary_c5d6a")
 }
 autoplay = "spin"
+
+[connection signal="animation_changed" from="AnimationPlayer" to="." method="_on_animation_player_animation_changed"]

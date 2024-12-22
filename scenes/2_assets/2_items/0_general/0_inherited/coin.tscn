@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://cj0swygqsv3c8"]
 
-[ext_resource type="PackedScene" uid="uid://cwr3dpckm5jc2" path="res://meshes/2_assets/3_items/0_general/coin.blend" id="1_uju76"]
+[ext_resource type="PackedScene" uid="uid://cwlyl1vna5dfq" path="res://meshes/2_assets/2_items/0_general/coin.blend" id="1_uju76"]
 
 [node name="coin2" instance=ExtResource("1_uju76")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)

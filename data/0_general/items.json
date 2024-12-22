@@ -7,8 +7,8 @@
 		"weight": 0,
 		"cost": 0,
 		"description": "How did you get this?",
-		"icon": "res://tiles/ui/icons/0_static/0_items/0_general/debug_cube.png",
-		"scene": "res://scenes/2_assets/3_items/0_general/0_inherited/debug_cube.tscn",
+		"icon": "res://graphics/ui/icons/0_static/0_items/0_general/debug_cube.png",
+		"scene": "res://scenes/2_assets/2_items/0_general/0_inherited/debug_cube.tscn",
 		"permanent": true
 	},
 	"apple": 
@@ -19,8 +19,8 @@
 		"weight": 1,
 		"cost": 1,
 		"description": "A delicious apple.",
-		"icon": "res://tiles/ui/icons/0_static/0_items/1_food/apple1.png",
-		"scene": "res://scenes/2_assets/3_items/1_food/0_inherited/apple1.tscn",
+		"icon": "res://graphics/ui/icons/0_static/0_items/1_food/apple1.png",
+		"scene": "res://scenes/2_assets/2_items/1_food/0_inherited/apple1.tscn",
 		"permanent": false
 	},
 	"badapple": 
@@ -31,8 +31,8 @@
 		"weight": 1,
 		"cost": 0,
 		"description": "A rotten apple.",
-		"icon": "res://tiles/ui/icons/0_static/0_items/1_food/apple2.png",
-		"scene": "res://scenes/2_assets/3_items/1_food/0_inherited/apple2.tscn",
+		"icon": "res://graphics/ui/icons/0_static/0_items/1_food/apple2.png",
+		"scene": "res://scenes/2_assets/2_items/1_food/0_inherited/apple2.tscn",
 		"permanent": false
 	},
 	"grapes": 
@@ -43,8 +43,8 @@
 		"weight": 1,
 		"cost": 5,
 		"description": "A bunch of grapes.",
-		"icon": "res://tiles/ui/icons/0_static/0_items/1_food/grapes1.png",
-		"scene": "res://scenes/2_assets/3_items/1_food/0_inherited/grapes1.tscn",
+		"icon": "res://graphics/ui/icons/0_static/0_items/1_food/grapes1.png",
+		"scene": "res://scenes/2_assets/2_items/1_food/0_inherited/grapes1.tscn",
 		"permanent": false
 	},
 	"newspaper":
@@ -55,8 +55,8 @@
 			"weight": 1,
 			"cost": 0,
 			"description": "Yesterday's news.",
-			"icon": "res://tiles/ui/icons/0_static/0_items/1_food/apple2.png",
-			"scene": "res://scenes/2_assets/3_items/1_food/0_inherited/apple2.tscn",
+			"icon": "res://graphics/ui/icons/0_static/0_items/1_food/apple2.png",
+			"scene": "res://scenes/2_assets/2_items/1_food/0_inherited/apple2.tscn",
 			"permanent": false
 		},
 	"dice": 
@@ -67,8 +67,8 @@
 		"weight": 1,
 		"cost": 5,
 		"description": "A pair of dice - they seem to be fairly weighted.",
-		"icon": "res://tiles/ui/icons/0_static/0_items/0_general/dice.png",
-		"scene": "res://scenes/2_assets/3_items/0_general/0_inherited/dice.tscn",
+		"icon": "res://graphics/ui/icons/0_static/0_items/0_general/dice.png",
+		"scene": "res://scenes/2_assets/2_items/0_general/0_inherited/dice.tscn",
 		"permanent": false
 	},
 	"coin10": 
@@ -76,8 +76,8 @@
 		"type": "money",
 		"name": "Coin",
 		"cost": 10,
-		"icon": "res://tiles/ui/icons/0_static/0_items/0_general/coin.png",
-		"scene": "res://scenes/2_assets/3_items/0_general/0_inherited/coin.tscn",
+		"icon": "res://graphics/ui/icons/0_static/0_items/0_general/coin.png",
+		"scene": "res://scenes/2_assets/2_items/0_general/0_inherited/coin.tscn",
 		"permanent": false
 	}
 }

@@ -55,9 +55,6 @@ item = "dice"
 
 [node name="0_debug_map1" parent="." instance=ExtResource("1_i5gxj")]
 
-[node name="Player" parent="." instance=ExtResource("2_nkuq1")]
-transform = Transform3D(-0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, -0.707107, 0, 0, 0)
-
 [node name="Screen" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11, 2.5, 11)
 mesh = SubResource("PlaneMesh_fwo3d")
@@ -155,3 +152,6 @@ def = SubResource("Resource_imj7v")
 [node name="Item17" parent="." instance=ExtResource("4_c7j8k")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 14)
 def = SubResource("Resource_6xgy2")
+
+[node name="player_root" parent="." instance=ExtResource("2_nkuq1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, -1)

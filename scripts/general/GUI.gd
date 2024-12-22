@@ -49,9 +49,15 @@ func money_popup():
 	
 	context2_popup_label3.text = str(GlobalSignalBus.player_wallet)
 	
+	#money popup preserve on-screen
+	#do this in popup anim because item type never changes in money, 
+	#just wallet value. this way, we just preserve the GUI for a bit and
+	#update value field live
 	if !context2_popup_anim.is_playing():
+		#start new popup
 		context2_popup_anim.play("show")
 	else:
+		#pan to midway through "show" anim if already playing to keep up
 		context2_popup_anim.seek(context2_popup_anim.current_animation_length/2)
 
 # Called when the node enters the scene tree for the first time.
@@ -69,6 +75,7 @@ func _process(delta):
 		cursor.play("default")
 
 func _on_item_add(item):
+	print(context1_popup_anim.get_queue())
 	if !item in item_count.keys():
 		item_count[item] = 1
 		context1_popup_anim.queue("show")
@@ -76,18 +83,23 @@ func _on_item_add(item):
 		item_count[item] += 1
 	
 	if item == item_count.keys()[0]:
+		#if just picked up currently displaying item, call item_popup again
 		item_popup(item_count.keys()[0])
-		if item_count[item] > 1:
+		#if 1. just picked up same item as is currently playing (parent nest if)
+		#   2. animation is more than halfway progressed
+		#then go to the halfway point to preserve popup on-screen 
+		if (context1_popup_anim.current_animation_position/context1_popup_anim.current_animation_length) > context1_popup_anim.current_animation_length/2:
+			#pan to midway through "show" anim if already playing to keep up
 			context1_popup_anim.seek(context1_popup_anim.current_animation_length/2)
-	
-	print(item_count)
 
 func _on_money_add(item):
 	money_popup()
 
-func _on_animation_player_animation_changed(old_name, new_name):
-	item_count.erase(item_count.keys()[0])
-	item_popup(item_count.keys()[0])
+#animation track requires a call method track with this signal on final KFrame
+func _on_animation_player_animation_changed(_old_name, _new_name):
+	if item_count.keys():
+		item_count.erase(item_count.keys()[0])
+		item_popup(item_count.keys()[0])
 
-func _on_animation_player_animation_finished(anim_name):
+func _on_animation_player_animation_finished(_anim_name):
 	item_count = {}
