@@ -1,14 +1,28 @@
-[gd_scene load_steps=6 format=3 uid="uid://cpae1fb15vd2s"]
+[gd_scene load_steps=8 format=3 uid="uid://cpae1fb15vd2s"]
 
-[ext_resource type="PackedScene" uid="uid://clah8yrgddnim" path="res://scenes/0_general/skyboxes/skybox1.tscn" id="1_jj3sa"]
 [ext_resource type="PackedScene" uid="uid://bw0teu0b2b8br" path="res://scenes/0_general/base/player/player.tscn" id="3_d8bio"]
 [ext_resource type="QuadMesh" uid="uid://faqwgsnrmmdi" path="res://resources/0_general/smokepuff.tres" id="4_1jeak"]
 [ext_resource type="PackedScene" uid="uid://bp5qtnxr2d8kx" path="res://scenes/1_maps/0_inherited/1_overworld/1_city_map.tscn" id="4_glg0q"]
 [ext_resource type="PackedScene" uid="uid://c86svrlqdsig" path="res://scenes/2_assets/1_furnishings/1_outdoor/0_inherited/doorway1.tscn" id="5_0feqe"]
 
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_pl1lk"]
+sky_energy_multiplier = 5.0
+
+[sub_resource type="Sky" id="Sky_501hk"]
+sky_material = SubResource("ProceduralSkyMaterial_pl1lk")
+
+[sub_resource type="Environment" id="Environment_ysf4m"]
+background_mode = 2
+sky = SubResource("Sky_501hk")
+reflected_light_source = 1
+ssao_enabled = true
+sdfgi_use_occlusion = true
+glow_blend_mode = 4
+
 [node name="CityMap1" type="Node3D"]
 
-[node name="Skybox" parent="." instance=ExtResource("1_jj3sa")]
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_ysf4m")
 
 [node name="Player" parent="." instance=ExtResource("3_d8bio")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.1, 0, -221)

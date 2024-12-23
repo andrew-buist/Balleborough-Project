@@ -1,7 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://cqh5mclysad0u"]
-
-[ext_resource type="PackedScene" uid="uid://c86svrlqdsig" path="res://scenes/2_assets/1_furnishings/1_outdoor/0_inherited/doorway1.tscn" id="1_fx25n"]
-
-[node name="Doorway1" type="Node3D"]
-
-[node name="doorway1" parent="." instance=ExtResource("1_fx25n")]

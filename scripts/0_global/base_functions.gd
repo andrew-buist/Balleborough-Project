@@ -18,6 +18,9 @@ func make_self_global_interactive(node, item):
 	GlobalSignalBus.local_items[node] = item
 	
 
+func add_door_to_scene(node, destination):
+	GlobalSignalBus.local_doors[node] = destination
+
 func add_item(item):
 	GlobalSignalBus.player_inventory.push_front(item)
 	GlobalSignalBus.emit_signal("add_item", item)

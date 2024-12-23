@@ -1,8 +1,11 @@
-[gd_scene load_steps=14 format=3 uid="uid://bw0teu0b2b8br"]
+[gd_scene load_steps=15 format=3 uid="uid://bw0teu0b2b8br"]
 
 [ext_resource type="Script" path="res://scripts/general/player.gd" id="1_5qgbl"]
 [ext_resource type="Script" path="res://scripts/general/camera.gd" id="3_csj5s"]
 [ext_resource type="PackedScene" uid="uid://bxolkpevgkfin" path="res://scenes/0_general/base/player/GUI.tscn" id="3_myha8"]
+
+[sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_d0pc6"]
+dof_blur_far_distance = 100.0
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_krcpu"]
 albedo_color = Color(0.694118, 0.360784, 0, 1)
@@ -52,6 +55,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.7, 5)
 
 [node name="camera" type="Camera3D" parent="camera_root"]
 unique_name_in_owner = true
+attributes = SubResource("CameraAttributesPractical_d0pc6")
 current = true
 fov = 60.0
 script = ExtResource("3_csj5s")

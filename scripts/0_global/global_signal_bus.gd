@@ -12,6 +12,7 @@ var player_thought = ""
 var player_obj
 
 var local_items: Dictionary = {}
+var local_doors: Dictionary = {}
 var player_inventory: Array[Dictionary] = []
 var player_wallet: int = 0
 @onready var items: Dictionary = BaseFunctions.load_json("res://data/0_general/items.json")
